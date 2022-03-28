@@ -1,5 +1,5 @@
 # DeepGram DEV.to AI ChatBot
-
+![plot](./images/Home.png)
 ## System Setup/Installation Guide
 
 Go to terminal and run ```sh $ python --version```
