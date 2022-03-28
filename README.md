@@ -5,7 +5,7 @@
 Make sure you have Python installed.
 
 ```sh
-$ git clone 
+$ git clone https://github.com/Tejender1521/Deepgram-AI-ChatBot.git
 $ cd HackCambridgeAtlas
 $ pip install -r requirements.txt
 $ python app.py
