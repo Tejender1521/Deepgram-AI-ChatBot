@@ -1,0 +1,52 @@
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="../images/logo.png" width="40" height="40" alt="" class="mx-2">
+      {{app_data['project_name']}}
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/chat-topics">Chat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/help">Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
+      <form action="/set_language" method="POST">
+      <select id="lang-selected" name="lang-selected" onchange="this.form.submit()" class="form-select-sm ml-3" aria-label="select">
+        <option value="en-GB">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+      </select>
+    </form>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Script to set language in the dropdown menu
+  var default_lang = '{{ session["language-code"] }}';
+
+  var language_selector = document.getElementById('lang-selected');
+
+  for(var j = 0; j < language_selector.length; j++) {
+    if (language_selector.options[j].value == default_lang) {
+      language_selector.selectedIndex = j;
+      break;
+    }
+  }
+</script>

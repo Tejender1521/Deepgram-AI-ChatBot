@@ -1,0 +1,6 @@
+###### Requirements without Version Specifiers ######
+flask
+openai
+requests
+soundfile
+gtts
