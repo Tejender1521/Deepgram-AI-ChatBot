@@ -105,7 +105,7 @@ venv.bak/
 
 .vscode
 temp/*
-keys/*
+
 
 
 *.log
