@@ -147,4 +147,4 @@ def chat(text):
     return chatbot.chat(text)
 
 if __name__ == '__main__':
-    app.run(debug=DEVELOPMENT_ENV)
+    app.run(host='0.0.0.0', port=80)
